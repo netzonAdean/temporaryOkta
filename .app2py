@@ -1,4 +1,3 @@
-
 # -*- coding: utf-8 -*-
 # Copyright 2015 Okta, Inc.
 #
@@ -71,8 +70,7 @@ logging.basicConfig(level=logging.DEBUG)
 #   This is implemented as a dictionary for DEMONSTRATION PURPOSES ONLY.
 #   On a production system, this information must come
 #   from your system's user store.
-user_store = {'netzon.adean@gmail':{'first_name':'netzon', 'last_name':'adean'}}
-#user_store = {}
+user_store = {}
 
 
 def saml_client_for(idp_name=None):
@@ -173,7 +171,6 @@ def idp_initiated(idp_name):
             'first_name': authn_response.ava['FirstName'][0],
             'last_name': authn_response.ava['LastName'][0],
             }
-	return redirect("/jkhkjhkjhkjhkjhkj")
     user = User(username)
     session['saml_attributes'] = authn_response.ava
     login_user(user)
